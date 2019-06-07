@@ -9,27 +9,6 @@ set.seed(1234)
 
 FinalGrades <- rnorm(n=40, mean=75, sd=5)
 
-# FinalGrades[1] = 50
-head(FinalGrades)
-tail(FinalGrades)
-summary(FinalGrades)
-# max(FinalGrades)
-# min(FinalGrades)
-
-
-# str(FinalGrades)
-# class(FinalGrades)
-
-# ls("package:stas")
-# help(rnorm)
-# example("rnorm")
-
-
-# for(i in 1:40)
-#   {
-#   print(1:i)
-#   }
-
 student_list <- data.frame()
 
 for(i in 1:40)
@@ -41,8 +20,6 @@ for(i in 1:40)
 
 student_list <- cbind(student_list, data.frame(FinalGrades))
 str(student_list)
-
-# names(student_list) <- c("StudentName","FinalGrades")
 
 unsuccessful_student <- subset(student_list, FinalGrades < 60, select=c(StudentName, FinalGrades))
 
